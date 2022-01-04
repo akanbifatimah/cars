@@ -1,0 +1,70 @@
+.image.fade{
+    display: none;
+}
+.container{
+    
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1rem;
+    transform: 0.6s ease;
+    user-select: none;
+    border-radius:0 3px 3px 0;
+
+}
+#prev{
+    position: absolute;
+    top: 45%;
+    left: 0;
+    padding: 15px;
+    font-size: 1rem;
+    transform: 0.6s ease;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    border-radius:0 3px 3px 0;
+}
+#next{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+#prev:hover,#next:hover{
+    background-color: rgba(0, 0, 0, 0.507);
+}
+.dots{
+    text-align: center;
+    margin: 2%;
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 2px;
+    transition: background-color 0.6s ease;
+}
+.active{
+    background-color: #717171;
+}
+.fade{
+    animation: fade 0.6s;
+}
+@keyframes fade{
+    from {opacity:.4}
+    to{opacity:1}
+}
+@media (max-width:728px){
+    .container{
+        width: 100%;
+    }
+}
